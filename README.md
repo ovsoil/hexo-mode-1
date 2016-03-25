@@ -69,7 +69,6 @@ The following commands are available in =markdown-mode=, =dired-mode=, =hexo-mod
 | *hexo-new*                        | Create new post anywhere.                                                  |
 | *hexo-move-article*               | Move article between *_post/* and *_draft/*.                               |
 | *hexo-touch-files-in-dir-by-time* | Touch all files by their timestamp to make files sortable in file-manager. |
-|-----------------------------------|----------------------------------------------------------------------------|
 | *hexo-server-run*                 | Open Hexo server process (posts only / posts + drafts)                     |
 | *hexo-server-stop*                | Stop Hexo server process                                                   |
 | *hexo-server-deploy*              | Deploy                                                                     |
@@ -116,8 +115,8 @@ Prefix *hexo-command-* means the function is only available under *hexo-mode*
 | *hexo-server-run*                    | *s r*       | Open Hexo server process (posts only / posts + drafts)                       |
 | *hexo-server-stop*                   | *s s*       | Stop Hexo server process                                                     |
 | *hexo-server-deploy*                 | *s d*       | Deploy                                                                       |
-| **Mode**                                 |             |                                                                              |
-| *hexo-command-help*                  | *h*, *?*    | Show key-binding cheat sheet                                                 |
+| **Mode**         |   |    | 
+| *hexo-command-quick-help*           | *h*, *?*    | Show key-binding cheat sheet                                                 |
 | *kill-buffer-and-window*             | *Q*         | Quit                                                                         |
 
 
