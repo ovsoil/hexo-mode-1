@@ -24,9 +24,9 @@ The following us unchanged from the original.
 Emacs major-mode & tools for [Hexo](https://github.com/hexojs/hexo).
 
 ### Screenshots
-![Screenshot 1](file:screenshots/screenshot_1.png)
+![Screenshot 1](screenshots/screenshot_1.png)
 
-![Screeenshot 2](file:screenshots/screenshot_2.png)
+![Screeenshot 2](screenshots/screenshot_2.png)
 
 ### Requirement
 - hexo
