@@ -85,11 +85,7 @@ The following commands are only available in *markdown-mode*
 
 #### Commands for *hexo-mode*
 
-The following commands & key-bindings are available in *hexo-mode*.
-
-```
-Prefix *hexo-command-* means the function is only available under *hexo-mode*
-```
+The following commands & key-bindings are available in *hexo-mode*.  Prefix *hexo-command-* means the function is only available under *hexo-mode*
 
 | Command                              | Key         | Description                                                                  |
 |--------------------------------------|-------------|----------------------------|
