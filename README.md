@@ -1,7 +1,7 @@
 # hexo-mode
 
 This repository includes my tweaks to the excellent
-[hexo](https://github.com/kuanyui/hexo.el), an emacs mode for working with
+[hexo.el](https://github.com/kuanyui/hexo.el), an emacs mode for working with
 [Hexo](http://hexo.io/) blogs. 
 
 The project was forked on 3/25/16.
@@ -21,11 +21,13 @@ the file.
 
 * fixed an apparent bug:  keymap was looking for `hexo-command-help` while
   function was names `hexo-command-quick-help`.  I changed the keymap.
+  
+* created README.md from original README.org (personal preference).
 
 
 ## Rest of This README
 
-The following us unchanged from the original.
+The following text is unchanged from the original.
 
 ## Original
 
