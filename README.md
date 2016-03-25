@@ -79,11 +79,10 @@ The following commands are available in =markdown-mode=, =dired-mode=, =hexo-mod
 The following commands are only available in *markdown-mode*
 
 | Command                            | Description                                                                        |
-|------------------------------------|------------------------------------------------------------------------------------|
-| *hexo-insert-article-link*         | Insert a link to specific article in *_posts/*.                                    |
-| *hexo-update-current-article-date* | Update article's date stamp by current time. *This may change its permanent link!* |
-| *hexo-follow-post-link*            | Open the article file link under the
-|cursor. <ex> *[Hello] (/2016/05/hello/)*       |
+|------------------------------------|--------------------------------------------|
+| *hexo-insert-article-link*         | Insert a link to specific article in *_posts/*.  
+| *hexo-update-current-article-date* | Update article's date stamp by current time. **This may change its permanent link!** |
+| *hexo-follow-post-link*            | Open the article file link under the cursor   |
 
 #### Commands for *hexo-mode*
 
@@ -94,41 +93,30 @@ Prefix *hexo-command-* means the function is only available under *hexo-mode*
 ```
 
 | Command                              | Key         | Description                                                                  |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
-| File                                 |             |                                                                              |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
+|--------------------------------------|-------------|----------------------------|
+| **File**                                 |    |     |
 | *hexo-command-open-file*             | *RET*       | Open file                                                                    |
 | *hexo-command-show-article-info*     | *SPC*       | Show article info                                                            |
 | *hexo-new*                           | *n*         | Create file                                                                  |
 | *hexo-command-rename-file*           | *R*, *[f2]* | Rename file                                                                  |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
-| View                                 |             |                                                                              |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
+| **View**                                 |    |     |
 | *hexo-command-revert-tabulated-list* | *g*         | Refresh                                                                      |
 | *tabulated-list-sort*                | *S*         | Sort according to this column header                                         |
 | *hexo-command-filter-tag*            | *f*         | Filter article by tag                                                        |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
-| Edit                                 |             |                                                                              |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
+| **Edit**                                 |             |                                                                              |
 | *hexo-touch-files-in-dir-by-time*    | *T T*       | *touch* all files by their timestamp to make files sortable in file-manager. |
 | *hexo-toggle-article-status*         | *T S*       | Toggle article status (Move file between *_posts/* and *_drafts/*)           |
 | *hexo-command-tags-toggler*          | *t*         | Add / Remove tags of a *single* article                                      |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
-| Mark                                 |             |                                                                              |
-|--------------------------------------+-------------+------------------------------------------------------------------------------|
+| **Mark**                                 |             |                                                                              |
 | *hexo-command-mark*                  | *m*         | Mark article                                                                 |
 | *hexo-command-unmark*                | *u*         | Unmark article                                                               |
 | *hexo-command-add-tags*              | *M a*       | Add tags to all marked articles                                              |
 | *hexo-command-remove-tags*           | *M r*       | Remove tags from all marked articles                                         |
-|--------------------------------------+-------------+------------------------------------------------------------------------------|
-| Server                               |             |                                                                              |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
+| **Server**                               |             |                                                                              |
 | *hexo-server-run*                    | *s r*       | Open Hexo server process (posts only / posts + drafts)                       |
 | *hexo-server-stop*                   | *s s*       | Stop Hexo server process                                                     |
 | *hexo-server-deploy*                 | *s d*       | Deploy                                                                       |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
-| Mode                                 |             |                                                                              |
-|--------------------------------------|-------------|------------------------------------------------------------------------------|
+| **Mode**                                 |             |                                                                              |
 | *hexo-command-help*                  | *h*, *?*    | Show key-binding cheat sheet                                                 |
 | *kill-buffer-and-window*             | *Q*         | Quit                                                                         |
 
