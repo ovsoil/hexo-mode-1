@@ -59,7 +59,7 @@ See `hexo-setq-tabulated-list-entries'")
   :group 'hexo)
 
 (defcustom hexo-markdown-suffix
-  ".md"
+  "md"
   "Suffix to use for markdown files"
   :type 'string
   :group 'hexo)
@@ -773,18 +773,18 @@ truncated by `tabulated-list'."
         ))))
 
 
-;;; A new version of hexo-new.  Borrowed core from Hyde for Jekyll
+;;; A better version of hexo-new.  Borrowed core from Hyde for Jekyll
 
-(defun hexo-new-post ()
+(defun hexo-new-post (title)
   "Creates a new post"
   (interactive "MEnter post title: ")
   (let ((post-file-name (expand-file-name (format "%s/%s/%s/%s.%s" 
                                                   hexo-root-dir
-						  'source'
+						  "source"
 						  hexo-posts-dir
 						  (downcase (replace-regexp-in-string " " "-" title))
-						  hexo-markdown-suffix))))
-        (hexo-buffer (current-buffer))
+						  hexo-markdown-suffix)))
+        (hexo-buffer (current-buffer)))
     (save-excursion
       (find-file post-file-name)
       (insert "---\n")
