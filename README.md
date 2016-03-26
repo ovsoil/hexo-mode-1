@@ -22,7 +22,18 @@ the file.
 * fixed an apparent bug:  keymap was looking for `hexo-command-help` while
   function was names `hexo-command-quick-help`.  I changed the keymap.
   
+* created a new `hexo-new-post` to replace previous `hexo-new`.  New version is
+  similar to `hyde/new-post` in [Hyde](https://github.com/nibrahim/Hyde) for
+  Jekyll.  It asks for a title, creates the filename (lower case, '-' for ' ')
+  and puts in default front-matter.
+  
+* started to create some customizable variables
+  
 * created README.md from original README.org (personal preference).
+
+## Todo
+
+* add in a standard file per hexo instance (.hexo.el) ala Hyde.
 
 
 ## Rest of This README
@@ -68,7 +79,7 @@ The following commands are available in =markdown-mode=, =dired-mode=, =hexo-mod
 
 | Command                           | Description                                                                |
 |-----------------------------------|----------------------------------------------------------------------------|
-| *hexo-new*                        | Create new post anywhere.                                                  |
+| *hexo-new-post*                        | Create new post..                                                  |
 | *hexo-move-article*               | Move article between *_post/* and *_draft/*.                               |
 | *hexo-touch-files-in-dir-by-time* | Touch all files by their timestamp to make files sortable in file-manager. |
 | *hexo-server-run*                 | Open Hexo server process (posts only / posts + drafts)                     |

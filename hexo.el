@@ -44,6 +44,34 @@ See `hexo-setq-tabulated-list-entries'")
 (defvar hexo-process nil
   "Hexo process object.")
 
+;;; Customizable variables
+
+(defcustom hexo-posts-dir 
+  "_posts"
+  "Directory that contains the posts"
+  :type 'string
+  :group 'hexo)
+
+(defcustom hexo-drafts-dir
+  "_drafts"
+  "Directory that contains the drafts"
+  :type 'string
+  :group 'hexo)
+
+(defcustom hexo-markdown-suffix
+  ".md"
+  "Suffix to use for markdown files"
+  :type 'string
+  :group 'hexo)
+
+(defcustom hexo-custom-params
+  '(("categories" "")
+    ("tags" "")
+    )
+  "Optional parameters for frontmatter of new posts"
+  :type 'list
+  :group 'hexo)
+
 ;; ======================================================
 ;; Faces
 ;; ======================================================
@@ -274,7 +302,7 @@ Also see: `hexo-generate-tabulated-list-entries'"
 "
   (cl-remove-if (lambda (x) (or
                         (not (file-exists-p x))
-                        (not (string-suffix-p ".md" x))
+
                         (member (file-name-base x) '("." ".."))
                         ;;(string-suffix-p "#" x) ;useless
                         (string-suffix-p "~" x)))
@@ -421,7 +449,7 @@ KEY is a downcased symbol. <ex> 'status "
 ;; Files
 (define-key hexo-mode-map (kbd "RET") 'hexo-command-open-file)
 (define-key hexo-mode-map (kbd "SPC") 'hexo-command-show-article-info)
-(define-key hexo-mode-map (kbd "N") 'hexo-new)
+(define-key hexo-mode-map (kbd "N") 'hexo-new-post)
 (define-key hexo-mode-map (kbd "R") 'hexo-command-rename-file)
 (define-key hexo-mode-map (kbd "<f2>") 'hexo-command-rename-file)
 ;; View
@@ -745,10 +773,33 @@ truncated by `tabulated-list'."
         ))))
 
 
-;; ======================================================
-;; Universal Commands
-;; ======================================================
-;; Following commands are available outside hexo-mode.
+;;; A new version of hexo-new.  Borrowed core from Hyde for Jekyll
+
+(defun hexo-new-post ()
+  "Creates a new post"
+  (interactive "MEnter post title: ")
+  (let ((post-file-name (expand-file-name (format "%s/%s/%s/%s.%s" 
+                                                  hexo-root-dir
+						  'source'
+						  hexo-posts-dir
+						  (downcase (replace-regexp-in-string " " "-" title))
+						  hexo-markdown-suffix))))
+        (hexo-buffer (current-buffer))
+    (save-excursion
+      (find-file post-file-name)
+      (insert "---\n")
+      (insert "layout: post\n")
+      (insert (format "title: \"%s\"\n" title))
+      (insert (format "date: \"%s\"\n" (format-time-string "%Y-%m-%d %H:%M:%S %z")))
+      (dolist (l hexo-custom-params)
+	(insert (format "%s: %s\n"
+			(first l)
+			(eval (second l)))))
+      (insert "---\n\n")
+      (save-buffer)
+      )
+    ))
+
 
 ;;;###autoload
 (defun hexo-new ()                      ;[TODO] Add tags when hexo-new
