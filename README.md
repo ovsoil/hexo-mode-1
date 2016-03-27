@@ -35,6 +35,14 @@ the file.
 
 * add in a standard file per hexo instance (.hexo.el) ala Hyde.
 
+* fix apparent bug in displaying tags and categories
+
+* test all features, decide if there's some I won't use
+
+* test to make sure it works with multiple blogs at once
+
+* redo documentation
+
 
 ## Rest of This README
 
