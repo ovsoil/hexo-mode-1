@@ -39,7 +39,10 @@ the file.
 
 * test all features, decide if there's some I won't use
 
-* test to make sure it works with multiple blogs at once
+* test to make sure it works with multiple blogs at once (it doesn't appear to,
+needs to be redone for that)
+
+* figure out why it requires an *_drafts* folder
 
 * redo documentation
 
